@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+int idade = 24;
+float altura = 1.75;
+char roupa = 'G';
+char nome [] = "Eduardo";
+printf("\nOlá %s!", nome);
+printf("\nVocê tem %d anos", idade);
+printf("\nSua altura é %.2f", altura);
+printf("\nVocê usa camisas tamanho %c", roupa);
+return 0;
+}
