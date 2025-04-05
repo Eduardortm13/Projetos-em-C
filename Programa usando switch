@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <ctype.h>
+int main() {
+char roupa;
+printf("Digite o tamanho de roupa que você veste (P, M ou G.): ");
+scanf("%c", &roupa);
+roupa = toupper(roupa); //toupper serve para transformar caracteres minúsculos em maiúsculos
+switch (roupa) { //só funciona com valores inteiros ou caracteres únicos
+case 'G':
+printf("Você se sente confortável com roupas maiores.\n");
+break;
+case 'M':
+printf("Você se sente confortável com roupas com um tamanho ok.\n");
+break;
+case 'P':
+printf("Você se sente confortável com roupas pequenas.\n");
+break;
+default:
+printf("Digite um tamanho de roupa válido: P, M ou G.\n");
+}
+return 0;
+}
