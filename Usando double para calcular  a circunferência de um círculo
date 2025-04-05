@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main(){
+const double pi = 3.141592653589793;
+double raio;
+double circunferência;
+printf("Digite o raio em metros: ");
+scanf("%lf", &raio);
+circunferência = 2*pi*raio;
+printf ("Circunferência = %lf", circunferência);
+return 0;
+}
