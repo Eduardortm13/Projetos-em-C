@@ -1,0 +1,12 @@
+#include <stdio.h>
+void repetir(){
+printf("Repetir\n");
+printf("Repetir\n");
+printf("Repetir\n");
+}
+int main(){
+repetir();
+repetir();
+return 0;
+}
+//void é lido pelo int main e é repetido pelo número de vezes que foi escrito em int main
