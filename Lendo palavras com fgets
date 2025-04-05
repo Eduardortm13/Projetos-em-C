@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main(){
+char palavra [25]; //o número dentro dos [] indica o número máximo de caracteres da palavra
+printf("Digite algo com no máximo 25 caracteres: ");
+fgets(palavra, 25, stdin); //fgets se comporta como scanf, porém ele consegue ler os espaços entre as palavres
+printf("%s", palavra);
+return 0;
+}
