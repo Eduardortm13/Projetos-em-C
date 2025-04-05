@@ -1,12 +1,19 @@
 #include <stdio.h>
-void repetir(){
-printf("Repetir\n");
-printf("Repetir\n");
-printf("Repetir\n");
+void emprestimo(char nome[], float salario){
+printf("\nOlá, %s", nome);
+printf("Seu salário é de: R$ %.2f\n", salario);
+if(salario >= 2500){
+printf("Parabéns! Você é elegível para o empréstimo.\n");}
+else {
+printf("Infelizmente, você não é elegível para o empréstimo.\n");}
 }
 int main(){
-repetir();
-repetir();
+char nome[100];
+float salario;
+printf("Digite seu nome: ");
+fgets(nome, 100, stdin);
+printf("Digite seu salário: R$ ");
+scanf("%f", &salario);
+emprestimo(nome, salario);
 return 0;
 }
-//void é lido pelo int main e é repetido pelo número de vezes que foi escrito em int main
