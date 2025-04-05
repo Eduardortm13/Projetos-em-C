@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+float temperatura;
+printf("Qual a temperatura de hoje?: ");
+scanf("%f", &temperatura);
+if(temperatura <= 15 || temperatura >= 35){
+printf("O clima está ruim!");}
+else{
+printf("O clima está agradável!");}    
+return 0;
+}
