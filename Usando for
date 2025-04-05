@@ -1,0 +1,6 @@
+#include<stdio.h>
+int main(){
+for(int i=20; i>=0; i-=2){ \\na parte i-=2 podemos substituir o "-=" por outros tipos de operação matemática, podemos usar ++ para aumentar de 1 em 1, +=2 para aumentar de 2 em 2, *=3 para multiplicar de 3 em 3 e por aí vai
+printf("%d\n", i);}
+return 0;
+}
