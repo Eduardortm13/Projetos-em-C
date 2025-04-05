@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main(){
+float peso, massa, gravidade = 9.81;
+printf("Digite o peso do corpo em kg: ");
+scanf("%f", &peso);
+massa = peso/gravidade;
+printf("Massa em kg = %.2f", massa);
+return 0;
+}
