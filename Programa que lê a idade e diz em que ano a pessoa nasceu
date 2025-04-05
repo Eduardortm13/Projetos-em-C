@@ -1,0 +1,11 @@
+Programa que lê a idade e diz em que ano a pessoa nasceu
+
+#include<stdio.h>
+int main(){
+int ano, idade;
+printf("Qual a sua idade?: ");
+scanf("%d", &idade);
+ano = 2025-idade;
+printf("Você nasceu no ano %d", ano);
+return 0;
+}
