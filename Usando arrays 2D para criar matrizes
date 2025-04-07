@@ -35,7 +35,7 @@ printf("Digite os valores para a matriz %dx%d:\n", linhas, colunas);
 for (int i = 0; i < linhas; i++) {
 for (int j = 0; j < colunas; j++) {
 printf("Elemento [%d][%d]: ", i, j);
-scanf("%lf", &numeros[i][j]); // %lf para double
+scanf("%lf", &numeros[i][j]);
 }
 }
 printf("\nMatriz digitada:\n");
