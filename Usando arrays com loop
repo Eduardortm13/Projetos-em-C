@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main(){
+double preços[]={5.00,10.00,15.00,20.00,25.00};
+for(int i=0; i < sizeof(preços)/sizeof(preços[0]); i++){ //dessa forma podemos adicionar valores sem precisar ficar alterando o código
+printf("R$%.2f\n", preços[i]);
+}
+return 0;
+}
+
+//ADICIONANDO NOVOS VALORES O CÓDIGO CONTINUA O MESMO 
+
+#include<stdio.h>
+int main(){
+double preços[]={5.00,10.00,15.00,20.00,25.00,30.00,35.00,40.00,45.00,50.00};
+for(int i=0; i < sizeof(preços)/sizeof(preços[0]); i++){
+printf("R$%.2f\n", preços[i]);
+}
+return 0;
+}
