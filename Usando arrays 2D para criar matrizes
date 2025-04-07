@@ -23,3 +23,27 @@ int main(){
     }
     return 0;
 }
+
+PARA CRIAR MATRIZES
+
+#include <stdio.h>
+int main() {
+double numeros[3][3]; //alterar aqui o tamanho da matriz
+int linhas = sizeof(numeros) / sizeof(numeros[0]);
+int colunas = sizeof(numeros[0]) / sizeof(numeros[0][0]);
+printf("Digite os valores para a matriz %dx%d:\n", linhas, colunas);
+for (int i = 0; i < linhas; i++) {
+for (int j = 0; j < colunas; j++) {
+printf("Elemento [%d][%d]: ", i, j);
+scanf("%lf", &numeros[i][j]); // %lf para double
+}
+}
+printf("\nMatriz digitada:\n");
+for (int i = 0; i < linhas; i++){
+for (int j = 0; j < colunas; j++){
+printf("%.2lf ", numeros[i][j]); // Exibe com 2 casas decimais
+}
+printf("\n");
+}
+return 0;
+}
