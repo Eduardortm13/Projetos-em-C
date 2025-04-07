@@ -1,6 +1,20 @@
 #include <stdio.h>
 int main(){
 double preços[]={5.00,10.00,15.00,20.00,25.00,30.00};
+printf("R$%.2f", preços[2]); //cada termo equivale a um número, por exemplo 10.00=1.
+return 0;
+}
+
+outra forma de se escrever seria:
+#include <stdio.h>
+int main(){
+double preços[6];
+preços[0]=5.00;
+preços[1]=10.00;
+preços[2]=15.00;
+preços[3]=20.00;
+preços[4]=25.00;
+preços[5]=30.00;
 printf("R$%.2f", preços[2]); \\cada termo equivale a um número, por exemplo 10.00=1.
 return 0;
 }
