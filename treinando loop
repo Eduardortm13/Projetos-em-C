@@ -1,0 +1,200 @@
+1)	Faça um programa que receba um número e imprima na tela a tabuada deste número
+
+#include <stdio.h>
+int main(){
+    float n1, tabuada, contador=0;
+    printf("Digite um número: ");
+    scanf("%f", &n1);
+    for(float contador=0; contador<=10; contador+=0.5){
+        tabuada=n1*contador;
+        printf("%.2f x %.2f = %.2f\n", n1, contador, tabuada);
+    }
+    return 0;
+}
+
+2)	Faça um programa que tenha uma função que receba dois números inteiros retorne o menor número.
+
+#include<stdio.h>
+int menor(int n1,int n2){
+    if(n1<n2){
+        return n1;
+    }
+    else{
+        return n2;
+    }
+}
+int main(){
+    int n1, n2, resultado;
+    printf("Digite n1: ");
+    scanf("%d", &n1);
+    printf("Digite n2: ");
+    scanf("%d", &n2);
+    resultado=menor(n1,n2);
+    printf("O menor número é: %d\n", resultado);
+    return 0;
+}
+
+3)	Escreva uma função que calcule e retorne a distância entre dois pontos ( x1, y1) e (x2, y2). Todos os números e valores de retorno devem ser do tipo float.
+
+#include<stdio.h>
+#include<math.h>
+float distanciacalculo(float x1, float x2, float y1, float y2){
+    float distancia= sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    return distancia;
+}
+int main(){
+    float x1, x2, y1, y2, distancia;
+    printf("Digite o valor de x1: ");
+    scanf("%f", &x1);
+    printf("Digite o valor de x2: ");
+    scanf("%f", &x2);
+    printf("Digite o valor de y1: ");
+    scanf("%f", &y1);
+    printf("Digite o valor de y2: ");
+    scanf("%f", &y2);
+    distancia = distanciacalculo(x1,x2,y1,y2);
+    printf("Resultado = %.2f", distancia);
+    return 0;
+}
+
+4)	Escreva um programa que leia 5 números inteiros positivos (verifique se este número é maior que zero). Para cada número informado escrever a soma de seus divisores (exceto ele mesmo). Utilize a função SomaDivisores para obter a soma. 
+
+#include <stdio.h>
+
+int SomaDivisores(int n) {
+    int soma = 0;
+    for (int i = 1; i < n; i++) {
+        if (n % i == 0) {
+            soma += i;
+        }
+    }
+    return soma;
+}
+
+int main() {
+    int n, i = 0;
+
+    while (i < 5) {
+        printf("Digite um número positivo: ");
+        scanf("%d", &n);
+
+        if (n > 0) {
+            printf("Soma dos divisores de %d (exceto ele mesmo): %d\n\n", n, SomaDivisores(n));
+            i++;
+        } else {
+            printf("Número inválido! Tente novamente.\n");
+        }
+    }
+
+    return 0;
+}
+
+5)	Escreva uma função que receba 3 notas de um aluno e uma letra. Se a letra for A a função retorna a média aritmética das notas do aluno e se for P, a sua média ponderada (pesos: 5, 3 e 2).
+
+#include<stdio.h>
+float calculomedia(float n1, float n2, float n3, char letra){
+    float mediaA, mediaP;
+    if(letra == 'A'){
+        mediaA=(n1+n2+n3)/3;
+        printf("Valor da média aritmética: %.2f", mediaA);
+        return mediaA;
+    }
+    else if(letra == 'P'){
+        mediaP=(n1*5+n2*3+n3*2)/(5+3+2);
+        printf("Valor da média ponderada: %.2f", mediaP);
+        return mediaP;
+}
+    else{
+        printf("Letra inválida");
+        return -1;
+    }
+}
+
+int main(){
+    float n1, n2, n3, media;
+    char letra; 
+    printf("Digite n1: ");
+    scanf("%f", &n1);
+    printf("Digite n2: ");
+    scanf("%f", &n2);
+    printf("Digite n3: ");
+    scanf("%f", &n3);
+    printf("Digite A para média aritmética e P para média ponderada: ");
+    scanf(" %c", &letra);
+    media=calculomedia(n1,n2,n3, letra);
+    printf("O valor da média é: %.2f", media);
+    return 0;
+}
+
+6)	Crie uma função que receba três valores, 'a', 'b' e 'c', que são os coeficientes de uma equação do segundo grau e retorne o valor do delta, que é dado por 'b² - 4ac'
+
+#include<stdio.h>
+float coeficientes(float n1, float n2, float n3){
+    float coeficiente;
+    coeficiente= (n2*n2)-4*n1*n3;
+    return coeficiente;
+}
+int main(){
+    float n1, n2, n3, resultado;
+    printf("Digite A da função: ");
+    scanf("%f", &n1);
+    printf("Digite B da função: ");
+    scanf("%f", &n2);
+    printf("Digite C da função: ");
+    scanf("%f", &n3);
+    resultado=coeficientes(n1,n2,n3);
+    printf("O delta da função é: %.2f", resultado);
+    return 0;
+}
+
+7)	Crie um aplicativo de conversão entre as temperaturas Celsius e Farenheit.
+Primeiro o usuário deve escolher se vai entrar com a temperatura em Célsius ou Farenheit, depois a conversão escolhida é realizada através de um comando SWITCH.
+Se C é a temperatura em Célsius e F em farenheit, as fórmulas de conversão são:
+C= 5.(F-32)/9
+F= (9.C/5) + 32
+
+8)	Faça um programa que tenha uma função que calcule o salario líquido de um professor. Serão fornecidos valor da hora aula, número de aulas dadas e o % de desconto do INSS.
+
+#include <stdio.h>
+float calcularSalarioLiquido(float valorHora, int numAulas, float percINSS) {
+    float salarioBruto = valorHora * numAulas;
+    float desconto = salarioBruto * (percINSS / 100);
+    float salarioLiquido = salarioBruto - desconto;
+    return salarioLiquido;
+}
+int main() {
+    float valorHora, percINSS, salario;
+    int numAulas;
+    printf("Digite o valor da hora-aula: R$ ");
+    scanf("%f", &valorHora);
+    printf("Digite o número de aulas dadas: ");
+    scanf("%d", &numAulas);
+    printf("Digite o percentual de desconto do INSS (ex: 11 para 11%%): ");
+    scanf("%f", &percINSS);
+    salario = calcularSalarioLiquido(valorHora, numAulas, percINSS);
+    printf("O salário líquido do professor é: R$ %.2f\n", salario);
+    return 0;
+}
+
+9)	Faça um programa que tenha uma função que receba um número inteiro e retorne seu sucessor e seu antecessor.
+
+#include<stdio.h>
+int sucessor(int n1){
+    return n1+1;
+}
+int antecessor(int n1){
+    return n1-1;
+}
+int main(){
+    int n1, suc, ante;
+    printf("Digite um número: ");
+    scanf("%d", &n1);
+    suc=sucessor(n1);
+    ante=antecessor(n1);
+    printf("O sucessor de %d é %d e o antecessor é %d", n1, suc, ante);
+    return 0;
+}
+
+
+
+
